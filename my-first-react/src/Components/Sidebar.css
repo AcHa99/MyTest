@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia:wght@400;700&display=swap');
+
+.SystemName {
+    font-size: 28px;
+    font-family: 'Princess Sofia', cursive;
+    border-bottom: none;
+    /* Add this line */
+    display: flex;
+    justify-content: center;
+}
+
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 1024px;
+    background-color: #0377A8;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    font-family: Poppins;
+}
+
+.SubItemsList {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background-color: #0377A8;
+    border-top: 1px solid #3a3f4c;
+    border-left: none;
+    border-right: none;
+    z-index: 1;
+}
+
+.SubItemsList.expanded {
+    max-height: 500px;
+}
+
+.SubItemsList.collapsed {
+    display: block;
+    max-height: 0;
+}
+
+.Sidebar .SidebarList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Sidebar .SidebarList .row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-bottom: none;
+    margin: 0;
+}
+
+.Sidebar .SidebarList .row:hover {
+    background-color: #135670;
+}
+
+.Sidebar .SidebarList .row #icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.Sidebar .SidebarList .row #title {
+    flex: 1;
+}
+
+.Sidebar .SidebarList .row #arrowicon {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.Sidebar .SidebarList .SubItemsList {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Sidebar .SidebarList .SubItemsList.collapsed {
+    display: block;
+}
+
+.Sidebar .SidebarList .SubItemsList .row {
+    padding-left: 20px;
+}
